@@ -8,7 +8,9 @@ class Publisher(models.Model):
     state_province = models.CharField(max_length=50)
     country = models.CharField(max_length=50)
     website = models.URLField(blank=True)
-
+    
+    def __unicode__(self):
+        return self.name
 
 class Author(models.Model):
     salutation = models.CharField(max_length=10)
@@ -16,6 +18,9 @@ class Author(models.Model):
     last_name = models.CharField(max_length=140)
     email = models.EmailField()
     #headshot = models.ImageField(upload_to='media')
+    
+    def __unicode__(self):
+        return self.first_name
 
 
 class Book(models.Model):
@@ -23,3 +28,7 @@ class Book(models.Model):
     authors = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField()
+
+    def __unicode__(self):
+        return self.title
+
