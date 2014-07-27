@@ -8,3 +8,9 @@ def tiempo_actual(request):
     html = "<html><body>esta es mi hora %s </body></html>" % ahora
     return HttpResponse(html)
 
+
+def incrementar_tiempo(request, aumento):
+    aumento = int(aumento)
+    dt = datetime.datetime.now() + datetime.timedelta(hours=aumento)
+    html = "<html><body>esta es mi hora %s </body></html>" % dt
+    return HttpResponse(html)
