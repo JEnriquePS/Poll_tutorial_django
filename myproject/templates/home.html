@@ -2,17 +2,17 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>dd</title>
+    <title>detalle</title>
 </head>
 <body>
     {% if poll_lista_pregunta %}
     {% for poll in poll_lista_pregunta %}
-        <li><a href=" {% url 'detalle_poll' poll.id  %}"
+        <li><a href=" {% url 'poll:detalle_poll' poll.id  %}"
                 >{{ poll.pregunta }}
         </a></li>
     {% endfor %}
     {% else %}
-        <p>inipasodfni</p>
+        <p>no hay preguntas</p>
 
     {% endif %}
 </body>

@@ -8,4 +8,6 @@ urlpatterns = patterns('poll.views',
                        url(r'^poll/$', 'poll_vista',name='detail2'),
                        url(r'^(?P<pk>\d+)/$', 'detalle_poll',
                         name='detalle_poll'),
+                       url(r'^(?P<pk>\d+)/$', 'detalle_choice',
+                        name='detalle_choice')
 )
