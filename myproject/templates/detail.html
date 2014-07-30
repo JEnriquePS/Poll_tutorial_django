@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>{{ pregunta.pregunta }}</h1>
+ {% for choice in pregunta.choice_set.all %}
+    <li>{{ choice.opcion }}</li>
+ {% endfor %}
+
+</body>
+</html>
