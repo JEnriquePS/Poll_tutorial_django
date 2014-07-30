@@ -6,6 +6,6 @@ urlpatterns = patterns('poll.views',
                        url(r'^add_time/(\d{1,2})/$', 'incrementar_tiempo',
                         name='detail2'),
                        url(r'^poll/$', 'poll_vista',name='detail2'),
-                       url(r'^(?P<poll_id>\d+)/$', 'detalle_poll',
-                        name='detail'),
+                       url(r'^(?P<pk>\d+)/$', 'detalle_poll',
+                        name='detalle_poll'),
 )

@@ -23,4 +23,4 @@ def poll_vista(request):
 
 def detalle_poll(request, pk):
     pre = get_object_or_404(Poll, pk=pk)
-    return render(request, 'detail.html', {'pregutna':pre})
+    return render(request, 'detail.html', {'pregunta':pre})

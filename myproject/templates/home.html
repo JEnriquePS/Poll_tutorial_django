@@ -7,7 +7,9 @@
 <body>
     {% if poll_lista_pregunta %}
     {% for poll in poll_lista_pregunta %}
-        <li><a href="/polls/{{ poll.id }}">{{ poll.pregunta }}</a></li>
+        <li><a href=" {% url 'detalle_poll' poll.id  %}"
+                >{{ poll.pregunta }}
+        </a></li>
     {% endfor %}
     {% else %}
         <p>inipasodfni</p>
