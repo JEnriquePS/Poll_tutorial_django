@@ -6,14 +6,15 @@
 </head>
 <body>
     {% if poll_lista_pregunta %}
-    {% for poll in poll_lista_pregunta %}
-        <li><a href=" {% url 'poll:detalle_poll' poll.id  %}"
-                >{{ poll.pregunta }}
-        </a></li>
-    {% endfor %}
+        {% for poll in poll_lista_pregunta %}
+            <li>
+                <a href=" {% url 'poll:detalle_poll' poll.id %}">
+                    {{ poll.pregunta }}
+                </a>
+            </li>
+        {% endfor %}
     {% else %}
         <p>no hay preguntas</p>
-
     {% endif %}
 </body>
 </html>

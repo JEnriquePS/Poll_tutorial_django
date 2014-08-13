@@ -1,4 +1,4 @@
 *.pyc
 venv_poll
 .idea
-*db.db
+db.db
