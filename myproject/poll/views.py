@@ -27,6 +27,9 @@ def detalle_poll(request, pk):
     pre = get_object_or_404(Poll, pk=pk)
     return render(request, 'detail.html', {'pregunta':pre})
 
+
 def detalle_choice(request, choice_id):
     choice_text = get_object_or_404(Choice, pk = choice_id)
-    return render(request, 'choice_detalle.html', {'choice_id':choice_id})
+    return render(request, 'choice_detalle.html', {'choice_id':choice_text})
+
+
