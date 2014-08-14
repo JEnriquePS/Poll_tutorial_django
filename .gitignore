@@ -2,4 +2,7 @@
 venv_poll
 .idea
 db.db
+<<<<<<< HEAD
 *.swp
+=======
+>>>>>>> e5b2f5255e0e4e2ef1d8213869ca09614776cd4f
