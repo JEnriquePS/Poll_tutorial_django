@@ -5,11 +5,11 @@
     <title>detalle</title>
 </head>
 <body>
-    {% if poll_lista_pregunta %}
-        {% for poll in poll_lista_pregunta %}
+    {% if latest_poll_list %}
+        {% for poll in latest_poll_list %}
             <li>
-                <a href=" {% url 'poll:detalle_poll' poll.id %}">
-                    {{ poll.pregunta }}
+                <a href=" {% url 'polls:detail' poll.id %}">
+                    {{ poll.question }}
                 </a>
             </li>
         {% endfor %}

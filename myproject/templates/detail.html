@@ -5,9 +5,9 @@
     <title></title>
 </head>
 <body>
-<h1>{{ pregunta.pregunta }}</h1>
- {% for choice in pregunta.choice_set.all %}
-    <li><a href="">{{ choice.opcion }}</a></li>
+<h1>{{ poll.question }}</h1>
+ {% for choice in poll.choice_set.all %}
+    <li><a href="">{{ choice.choice_text }}</a></li>
  {% endfor %}
 
 </body>
